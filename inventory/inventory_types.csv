@@ -1,0 +1,94 @@
+Group,Kind,Edit on screen,Can affect the story,Record type,Different items
+Character,Voice and persona,Character,,avatar_persona_state,1
+Character,Clothing materials,Unlocks,,char_cust_material_data,21
+Character,Saved looks,Unlocks,,char_cust_outfit_data,41
+Character,Skin colours,Unlocks,,char_cust_skin_shader_info_data,46
+Character,Clothing and body,Unlocks,,char_cust_wearable_data,2397
+Character,What you're wearing,Character,,character_customization_state,1
+Character,Emotes,Unlocks,,collectible_emote_state,156
+Character,Clothing rewards,Unlocks,,collectible_wearable_state,171
+Character,Emotes equipped,Loadout,,emote_state,1
+Character,Crew conversations,Unlocks,,friend_conversation_data,129
+Character,Homie outfits,Unlocks,,homie_outfit_state,31
+Character,Homies,Unlocks,Yes,homie_state,7
+Character,Outfit kept during missions,Tables,Yes,mission_character_customization_backup,1
+Character,Perks,Unlocks,,perk_entry_state,50
+Character,Perk slots,Loadout,,perk_slot_state,5
+Character,Outfit kept during pranks,Tables,Yes,prank_character_customization_backup,1
+Character,Skills,Unlocks,,skill_info_data,117
+Empire and HQ,HQ props,Unlocks,,building_customization_prop_info_state,149
+Empire and HQ,Gang members,Unlocks,,gang_customization_data,40
+Empire and HQ,Gang vehicles,Unlocks,,gang_vehicle_customization_data,18
+Empire and HQ,HQ prop placement,Tables,,hq_prefab_anchor_info_state,22
+Empire and HQ,HQ theme in use,Loadout,,hq_room_info_state,1
+Empire and HQ,HQ themes,Unlocks,,hq_room_theme_info_state,2
+Empire and HQ,Neighborhoods,Unlocks,Yes,neighborhood_state,106
+Empire and HQ,Venture blueprints,Tables,Yes,real_estate_blueprint_state,33
+Empire and HQ,Venture goals,Tables,Yes,real_estate_goal_state,78
+Empire and HQ,Venture lots,Tables,Yes,real_estate_lot_state,18
+Game settings,Used-cheats mark,Overview,,cheat_savegame_state,1
+Game settings,Difficulty,Loadout,,difficulty_state,1
+Game settings,Gameplay variables,Tables,Yes,gameplay_variables_state,1
+Game settings,Save version,Tables,Yes,savegame_version_data,1
+Money and progress,Level rewards,Unlocks,,aspiration_unlock_state,25
+Money and progress,Level,Overview,,avatar_progression_state,1
+Money and progress,Reward bundles,Unlocks,Yes,collectible_suite_state,300
+Money and progress,Upgrade tiers,Unlocks,,collectible_upgrade_data,5
+Money and progress,Empire tier,Overview,,criminal_tier_state,1
+Money and progress,Money and XP,Overview,,currency_state,4
+Money and progress,"Features, DLC ownership and level unlocks",Unlocks,Yes,gameplay_unlock_state,94
+Money and progress,Achievement progress,Unlocks,Yes,gml_achievement_state,53
+Money and progress,Decimal stats,Stats,,gml_stat_float_data,6
+Money and progress,Whole-number stats,Stats,,gml_stat_integer_data,7
+Money and progress,Cash waiting to collect,Overview,,money_cache_state,1
+Money and progress,Perk challenge count,Tables,,perks_config_info_data,1
+Money and progress,Stunt counters,Tables,,stunt_info_data,263
+Phone and menus,Phone apps,Tables,,cell_phone_app_state,25
+Phone and menus,Saintsbook order,Tables,,saintsbook_order,1
+Phone and menus,Saintsbook posts,Tables,Yes,saintsbook_post_data,242
+Phone and menus,Unlocked shortcuts,All data,,unlocked_shortcut_data,1
+Radio,Playlists,Tables,,playlist_info_state,5
+Radio,Ads,Unlocks,,radio_commercial_info_state,52
+Radio,News,Unlocks,,radio_newscast_info_state,56
+Radio,Songs,Unlocks,,radio_song_info_state,139
+Radio,Station override,Tables,,radio_state,1
+Story and missions,Survival ratings,Tables,,atcha_survival_instance_state,12
+Story and missions,Bonus objectives,Unlocks,,bonus_objective_data,85
+Story and missions,Boot Hill contestants,Tables,,boothill_contestant_data,4
+Story and missions,Challenges,Tables,Yes,challenge_info_data,695
+Story and missions,Challenge packs,Unlocks,,challenge_pack_info_data,102
+Story and missions,Side hustles and diversions,Tables,Yes,diversion_info_data,150
+Story and missions,Flashpoints,Unlocks,,flashpoint_info_data,89
+Story and missions,Mission groups,All data,Yes,mission_group_state,1
+Story and missions,Missions,Tables,Yes,mission_info_state,142
+Story and missions,Stores bought from,Unlocks,,store_info_data,89
+Story and missions,Tutorial popups,Unlocks,,tutorial_state,244
+Vehicles,Part rewards,Unlocks,,collectible_vehicle_customization_vid_state,293
+Vehicles,Vehicle rewards,Unlocks,,collectible_vehicle_state,89
+Vehicles,Paint materials,Unlocks,,vehicle_cust_mat_data,143
+Vehicles,Wraps and decals,Unlocks,,vehicle_cust_material_texture_set_state,427
+Vehicles,Parts,Unlocks,,vehicle_cust_vid_slot_option_name_state,426
+Vehicles,Your garage,Garage,,vehicle_save_state,1
+Vehicles,Vehicle ultimates,Unlocks,,vehicle_ultimate_state,7
+Vehicles,Models,Unlocks,,vehicle_variant_entry_state,552
+Vehicles,Wheels,Unlocks,,vehicle_wheel_axle_name_state,118
+Weapons,Boot Hill weapon upgrades,Unlocks,,boothill_weapon_class_upgrade_data,11
+Weapons,Weapon rewards,Unlocks,,collectible_weapon_state,28
+Weapons,Weapon wheel and ammo,Tables,,inventory_slot_default_data,13
+Weapons,Weapons,Weapons,,inventory_weapon_data,170
+Weapons,Weapon materials,Unlocks,,inventory_weapon_material_data,211
+Weapons,Weapon material lists,All data,,inventory_weapon_material_list_data,69
+Weapons,Decal sets,Unlocks,,inventory_weapon_texture_set_data,40
+Weapons,Decals,Unlocks,,inventory_weapon_texture_state,117
+Weapons,Weapon skins,Unlocks,,weapon_skin_state,315
+World,World zone sets,Tables,Yes,city_enforced_zone_set_exclusion_group_state,4
+World,Cities,Tables,Yes,city_state,2
+World,Fast travel,Unlocks,,city_warp_point_state,44
+World,Discoverable places,Tables,,discoverable_info_data,36
+World,Districts,Unlocks,,district_state,41
+World,Enemy types,Tables,Yes,enemy_type_data,217
+World,Loot categories,Tables,,loot_system_state,1
+World,Map districts,Unlocks,,map_district_state,24
+World,Collectibles in the world,Tables,Yes,open_world_collectible_data,125
+World,Where you start,Overview,,savegame_city_warp_entry_state,1
+World,Treasure found,Unlocks,,treasure_data,53

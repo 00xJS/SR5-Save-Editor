@@ -1,0 +1,17 @@
+# Built program: attach it to a release instead of committing it
+*.exe
+*.pdb
+build/
+
+# Saves never get uploaded, wherever they are. They hold your character.
+samples/
+*.sf_pc
+*.met_pc
+
+# Only the README is uploaded. Notes and research stay local.
+*.md
+!README.md
+
+# Python cache
+__pycache__/
+*.pyc

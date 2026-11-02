@@ -1,0 +1,132 @@
+ambulance	Responder
+ambulance_01_ps	Responder
+atv_01	Kicki
+bike_dirt_02	Sandstorm Elite
+bike_dirt_02b	Idols Sandstorm
+bike_exotic_03	Dustrider
+bike_moped_01	Widowmaker
+bike_rocket_02	Kenshin
+bike_street_01	Snake
+bike_street_01b	Panteros Snake
+bike_street_02	Estrada
+boat_sail_01	Malta
+boat_speed_01	Miami
+boat_speed_01_boothill	Miami
+boat_standard_01	Maelstrom
+boat_yacht_01	Minnow
+bowelrod	Bowelrod
+broomstick_01	Nimrod 3000
+buggy_01	Ant
+buggy_02	Skorpio
+buggy_03	Hopper
+bus_01	Cheetah
+cart_01	Palanquin
+cart_01_covered	Palanquin
+cart_01_frost	Frost Chariot
+cart_02	Best Boy
+classic_01	Ethel
+classic_03	Hollywood
+compact_01	Whip
+compact_01_ned	Whip
+compact_02	Ride
+compact_03	Mockingbird
+compact_05	Emu
+ct_idols_boss_boat	Miami
+fire_01	Blaze
+flatbed	Landbarge
+flatbed_choplifter_statue	Landbarge
+flatbed_fireworks	Landbarge
+flatbed_toxic	Landbarge
+foodtruck_01	Munchback
+foodtruck_01_diversion	Munchback
+foodtruck_02	Frying Dutchman
+foodtruck_chicken	Chicken a la King
+foodtruck_hot_dog	I Dream of Weenie
+foodtruck_ice_cream	Twisty Creamy
+foodtruck_sushi	Six Shooter Samurai
+foodtruck_taco	Chalupacabra
+front_loader_01	Diggum
+garbage_01	Sanicruiser
+go_cart	Shifty
+go_cart_ms_faire_b	Shifty
+hearse_01	Reaper
+heli_fighter_01	Tornado
+heli_fighter_01_nahualli	Intrepid
+heli_fighter_02	MDI-815A
+heli_police_01	Oppressor
+heli_police_01_heist	Intrepid
+heli_police_spotlight	Oppressor
+heli_standard_02	Thompson
+heli_standard_02_choplifter	Thompson
+heli_standard_02_tier4	Thompson
+heli_standard_02_turret	Thompson
+heli_standard_03	Galitrax
+heli_standard_03_rotorhead	Rotorhead
+hoverboard_01	Prototype RTP 62-8S
+jet_ski	Shark
+jetski_02	Barbados
+limo_01	Gentry
+luxury_04	Eiswolf
+luxury_04_ct_heist	Eiswolf
+luxury_04_ct_road	Eiswolf
+luxury_04_laundromat	Eiswolf
+monster_01	Bullpup
+monster_02	Gargantua
+monster_03	Heavyweight
+muscle_01	Dreadnought
+muscle_01_armored	Dreadnought
+muscle_01_laundromat	Dreadnought
+muscle_02	Hammerhead
+muscle_03	Compton
+muscle_04	Phoenix
+muscle_05	Bucket
+novelty_ned	Ned's Chicken Skipper
+pickup_01	Ridgelord
+pickup_02	Varsity
+pickup_03	Skirmish
+pickup_03_turret	Skirmish
+police_01	Peacemaker
+police_02	Shield
+retro_rocket	Vindicator
+riot_02	Bunker
+rv_01	Buffalo
+sedan_01	Olive
+sedan_01_laundromat	Olive
+sedan_01b	Saints Olive
+sedan_04	Courser
+sedan_04_laundromat	Courser
+semi_01	Peterliner
+sp_apc_01	MDI-525C
+sport_01	Crisis
+sport_02	Galahad
+sport_02_laundromat	Galahad
+sport_03	Raycaster
+supercar_01	Attrazione
+supercar_01_laundromat	Attrazione
+supercar_02	Fer de Lance
+suv_01	Saguaro
+suv_08	Gibraltar
+suv_police_01	Vigilance
+tank_01	Adversary
+tank_02	MDI-344T
+tank_03	Maximillian
+tinfoil_car	Potato
+truck_armored_01	Titan
+truck_base	Mule
+truck_base_planet_saints	Mule
+truck_classic_01	Grandad
+truck_classic_02	Lexington
+truck_classic_02_turret	Lexington
+truck_classic_frost	Frosty Grandad
+truck_classic_kraken	Sandy Grandad
+truck_tow_01	Shaft
+two_fronts	Hollybird
+utility_01	Greenscaper
+van_01	Barracas
+van_02	Porter
+van_04	Sojourn
+vtol_02	MDI-921V
+vtol_bike_01	MDI-707B
+wagon_01	Schooner
+wagon_02	Ferryman
+wagon_09	Santa's Truckster

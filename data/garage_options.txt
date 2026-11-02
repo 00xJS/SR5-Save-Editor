@@ -1,0 +1,97 @@
+# N path note: what saves hold. H field hash label: a handle choice.
+N	m_customized.m_attached_to_someone	Seen: 0
+N	m_customized.m_bumper_level	Seen: 0, 1, 2, 3
+N	m_customized.m_deformation_picks	Seen: 0
+N	m_customized.m_external_save_data.m_normal_axles[].m_rim_variant_idx	Seen: -1 to 73
+N	m_customized.m_external_save_data.m_normal_axles[].m_tire_profile	Seen: 0, 130, 131, 132, 133, 134
+N	m_customized.m_external_save_data.m_normal_axles[].m_tire_variant_idx	Seen: -1 to 6
+N	m_customized.m_external_save_data.m_normal_axles[].m_wheel_size	Seen: 0.0 to 2.76
+N	m_customized.m_external_save_data.m_normal_axles[].m_wheel_width	Seen: 0.0 to 3.05
+N	m_customized.m_external_save_data.m_num_axles	Seen: 0, 2
+N	m_customized.m_external_save_data.m_num_part_slots	Seen: 0
+N	m_customized.m_external_save_data.m_offroad_axles[].m_rim_variant_idx	Seen: -1, 14, 17, 68
+N	m_customized.m_external_save_data.m_offroad_axles[].m_tire_profile	Seen: 0, 131, 132, 133, 134
+N	m_customized.m_external_save_data.m_offroad_axles[].m_tire_variant_idx	Seen: -1, 0, 1, 2, 4, 6
+N	m_customized.m_external_save_data.m_offroad_axles[].m_wheel_size	Seen: 0.0 to 2.76
+N	m_customized.m_external_save_data.m_offroad_axles[].m_wheel_width	Seen: 0.0 to 3.05
+N	m_customized.m_external_save_data.m_part_slot_choice[]	Seen: -1, 0
+N	m_customized.m_external_save_data.m_underglow_data.m_color_choice	Seen: -1 to 25
+N	m_customized.m_external_save_data.m_underglow_data.m_params.m_blacklight	Seen: 0.0
+N	m_customized.m_external_save_data.m_underglow_data.m_params.m_color.components.m_w	Seen: 0.0, 1.0
+N	m_customized.m_external_save_data.m_underglow_data.m_params.m_color.components.m_x	Seen: -0.056 to 3744.091
+N	m_customized.m_external_save_data.m_underglow_data.m_params.m_color.components.m_y	Seen: 0.0 to 0.1
+N	m_customized.m_external_save_data.m_underglow_data.m_params.m_color.components.m_z	Seen: -88191.0 to 11599.875
+N	m_customized.m_external_save_data.m_underglow_data.m_params.m_intensity	Seen: -15713.453 to 29378.906
+N	m_customized.m_frame_level	Seen: 0, 1, 2, 3
+N	m_customized.m_nitro_level	Seen: 0, 1
+N	m_customized.m_nitro_purchased	Seen: 0, 1
+N	m_customized.m_offroad_kit	Seen: 0, 1
+N	m_customized.m_offroad_purchased	Seen: 0, 1
+N	m_customized.m_show_special_once	Seen: 0, 1
+N	m_customized.m_someone_attached_to_me	Seen: 0
+N	m_customized.m_special_unlocked	Seen: 0, 1
+N	m_customized.m_special_upgrade	Seen: 0, 1
+N	m_customized.m_tether_equipped	Seen: 0, 1
+N	m_customized.m_tether_purchased	Seen: 0, 1
+N	m_customized.m_tire_level	Seen: 0, 1, 2, 3
+N	m_customized.m_top_speed_level	Seen: 0
+N	m_customized.m_torque_level	Seen: 0, 1, 2, 3
+N	m_customized.m_wrap_save_data.m_dirt_intensity	Seen: 0.0, 0.001, 0.002
+N	m_customized.m_wrap_save_data.m_dust_intensity	Seen: 0.0, 0.196
+N	m_customized.m_wrap_save_data.m_linked_data[]	Seen: 0, 1
+N	m_customized.m_wrap_save_data.m_mat_tex_selection[]	Seen: 0 to 28
+N	m_customized.m_wrap_save_data.m_material_data[].m_flags.m_custom_value	Seen: 0, 1
+N	m_customized.m_wrap_save_data.m_material_data[].m_flags.m_is_customizable	Seen: 0, 1
+N	m_customized.m_wrap_save_data.m_material_data[].m_mat_pal_selection[]	Seen: 0 to 69
+N	m_customized.m_wrap_save_data.m_material_data[].m_param_mappings[].m_flags.m_custom_value	Seen: 0, 1
+N	m_customized.m_wrap_save_data.m_material_data[].m_param_mappings[].m_flags.m_is_customizable	Seen: 0, 1
+N	m_customized.m_wrap_save_data.m_paint_selection	Seen: 0, 2, 3, 4, 19, 27
+N	m_customized.m_wrap_save_data.m_plate_seed	Seen: 0.0 to 1.0
+N	m_customized.m_wrap_save_data.m_vid_slot_selection[]	Seen: 0 to 8
+N	m_favorite_slot	Seen: 0, 1
+N	m_from_garage	Seen: 1
+N	m_has_customization	Seen: 0, 1
+N	m_is_permanent	Seen: 0, 1
+N	m_is_reward	Seen: 0, 1
+N	m_sort_order	Seen: 0.0, 1.0
+H	m_engine_audio	0576d415	As on suv_08_preset_2
+H	m_engine_audio	080d93e1	As on tank_02_ambient
+H	m_engine_audio	22acc201	As on semi_01_unique_parking
+H	m_engine_audio	24967e60	As on compact_01_tapeworm_1
+H	m_engine_audio	2860deb2	As on compact_02_ultimate
+H	m_engine_audio	2b36c63e	As on riot_02_swat
+H	m_engine_audio	35a8775a	As on suv__police_01_swat
+H	m_engine_audio	3d1ed74b	As on go_cart_tub
+H	m_engine_audio	3e8d913f	As on sports_03_ultimate
+H	m_engine_audio	65616cb7	As on supercar_02_preset_1
+H	m_engine_audio	6d367bfa	As on cart_01_ambient
+H	m_engine_audio	77fad637	As on muscle_02_bling
+H	m_engine_audio	89c392f8	As on sedan_01b_saints
+H	m_engine_audio	8bc5d6b0	As on pickup_02_slice
+H	m_engine_audio	8ea1fda4	As on two_fronts_reward
+H	m_engine_audio	a8d9db80	As on front_loader_01_preset_1
+H	m_engine_audio	cb59a317	As on bike_rocket_02_ambient
+H	m_engine_audio	dc6817f1	As on buggy_03_park_ranger
+H	m_engine_audio	dcbddd60	As on pickup_01_crew_saint
+H	m_engine_audio	e35a92f8	As on tank_03_preset_1
+H	m_horn_audio	0e978ea1	As on semi_01_unique_parking
+H	m_horn_audio	115d5733	As on buggy_03_park_ranger
+H	m_horn_audio	4649b73b	As on go_cart_chopshop
+H	m_horn_audio	53e9d948	As on go_cart_tub
+H	m_horn_audio	59b0981c	As on two_fronts_reward
+H	m_horn_audio	68a37621	As on tinfoil_preset_2
+H	m_horn_audio	729510fe	As on compact_02_ultimate
+H	m_horn_audio	9c989598	As on cart_01_ambient
+H	m_horn_audio	b0342a3e	As on pickup_01_crew_saint
+H	m_horn_audio	b0ad1f7e	As on compact_01_tapeworm_1
+H	m_horn_audio	b4f09bea	As on sedan_01b_saints
+H	m_horn_audio	b5c0a6ee	As on monster_01_ambient
+H	m_horn_audio	c2c9530e	As on pickup_02_slice
+H	m_horn_audio	cc478434	As on wagon_01_preset_1
+H	m_horn_audio	f09e93ef	As on sports_03_ultimate
+H	m_horn_audio	f3373962	As on supercar_02_preset_1
+H	m_horn_audio	fee09a0a	As on muscle_02_bling
+H	m_siren_audio	0c6ee57d	As on buggy_03_park_ranger
+H	m_siren_audio	b577eb14	As on suv__police_01_swat
+H	m_tranny_audio	2938b166	As on supercar_02_preset_1
+H	m_tranny_audio	b1d81a62	As on tank_03_preset_1

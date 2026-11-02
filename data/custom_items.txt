@@ -1,0 +1,6 @@
+# Items your own mods added to the game, matched anywhere in a name. Listed in the inventory, but never added to a save.
+# From the SR5-Tweaks import work: the car patch in sr5\data\dlc_preorder. Careful: two_fronts, with an s, is a real game car.
+two_frontz
+sedan_01z
+bike_dirt_02z
+bike_street_01z

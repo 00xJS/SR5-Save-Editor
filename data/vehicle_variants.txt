@@ -1,0 +1,553 @@
+# variant	how you normally meet it	vehicle info	display name
+ambulance_01_ambient	uncommon	ambulance_01_ps	Responder
+ambulance_01_beater	parked	ambulance	Responder
+ambulance_01_preset_1	preset	ambulance	Responder
+ambulance_01_preset_2	preset	ambulance	Responder
+ambulance_01_roadkill	reward	Ambulance	
+apc_01_ambient	parked	sp_apc_01	MDI-525C
+apc_01_ng	gang	sp_apc_01	MDI-525C
+apc_01_opened_1	unlisted	sp_apc_01	MDI-525C
+apc_01_preset_1	preset	sp_apc_01	MDI-525C
+atv_01_ambient	traffic	atv_01	Kicki
+atv_01_beater	rare	atv_01	Kicki
+atv_01_pony_express	unlisted	atv_01	Kicki
+atv_01_preset_1	uncommon	atv_01	Kicki
+bike_exotic_03_preset_1	preset	bike_exotic_03	Dustrider
+bike_exotic_03_unlockable	unlisted	bike_exotic_03	Dustrider
+bike_exotic_03_wastelanders	traffic	bike_exotic_03	Dustrider
+bike_rocket_02_ambient	traffic	bike_rocket_02	Kenshin
+bike_rocket_02_beater	unlisted	bike_rocket_02	Kenshin
+bike_rocket_02_preset_1	cheat	bike_rocket_02	Kenshin
+blank_ambient	unlisted	?	
+boat_sail_01_ambient	traffic	boat_sail_01	Malta
+boat_sail_01_parked	parked	boat_sail_01	Malta
+boat_sail_01_preset_1	preset	boat_sail_01	Malta
+boat_speed_01_ambient	script	boat_speed_01	Miami
+boat_speed_01_armored	unlisted	boat_speed_01	Miami
+boat_speed_01_boothill	unlisted	boat_speed_01_boothill	Miami
+boat_speed_01_mission	mission	boat_speed_01_ct_idols_escape_boat	
+boat_speed_01_police	reward	boat_speed_01	Miami
+boat_speed_01_preset_1	preset	boat_speed_01	Miami
+boat_standard_01_ambient	traffic	boat_standard_01	Maelstrom
+boat_standard_01_preset_1	preset	boat_standard_01	Maelstrom
+boat_yacht_01_ambient	traffic	boat_yacht_01	Minnow
+boat_yacht_01_preset_1	preset	boat_yacht_01	Minnow
+boat_yacht_01_preset_2	preset	boat_yacht_01	Minnow
+boat_yacht_01_repo	reward	boat_yacht_01	Minnow
+bowelrod_ambient	unlisted	bowelrod	Bowelrod
+bowelrod_bowelrod	reward	bowelrod	Bowelrod
+bowelrod_preset_1	preset	bowelrod	Bowelrod
+broomstick_01_preset_1	preset	broomstick_01	Nimrod 3000
+broomstick_01_reward	reward	broomstick_01	Nimrod 3000
+buggy_01_ambient	cheat	buggy_01	Ant
+buggy_01_beater	traffic	buggy_01	Ant
+buggy_01_bling	uncommon	buggy_01	Ant
+buggy_01_preset_1	parked	buggy_01	Ant
+buggy_01_preset_2	preset	buggy_01	Ant
+buggy_01_reward	reward	buggy_01	Ant
+buggy_01_reward_2	reward	buggy_01	Ant
+buggy_01_unlockable	reward	buggy_01	Ant
+buggy_01_wastelanders	parked	buggy_01	Ant
+buggy_02_ambient	uncommon	buggy_02	Skorpio
+buggy_02_beater	unlisted	buggy_02	Skorpio
+buggy_02_idols	parked	buggy_02	Skorpio
+buggy_02_idols_tether	unlisted	buggy_02	Skorpio
+buggy_02_pony_express	unlisted	buggy_02	Skorpio
+buggy_02_preset_1	preset	buggy_02	Skorpio
+buggy_02_preset_2	preset	buggy_02	Skorpio
+buggy_03_ambient	uncommon	buggy_03	Hopper
+buggy_03_beater	traffic	buggy_03	Hopper
+buggy_03_panteros	parked	buggy_03	Hopper
+buggy_03_park_ranger	uncommon	buggy_03	Hopper
+buggy_03_pony_express	unlisted	buggy_03	Hopper
+buggy_03_preset_1	preset	buggy_03	Hopper
+buggy_03_preset_2	preset	buggy_03	Hopper
+buggy_03_saints	gang	buggy_03	Hopper
+bus_01_ambient	traffic	bus_01	Cheetah
+bus_01_preset_1	preset	bus_01	Cheetah
+bus_01_road_block	parked	bus_01	Cheetah
+cart_01_ambient	uncommon	cart_01	Palanquin
+cart_01_covered_marshall	unlisted	cart_01_covered	Palanquin
+cart_01_duststorm_1	parked	cart_01	Palanquin
+cart_01_frost_reward	reward	cart_01_frost	Frost Chariot
+cart_01_marshall	parked	cart_01	Palanquin
+cart_01_phoenix	gang	cart_01	Palanquin
+cart_01_pony_express	unlisted	cart_01	Palanquin
+cart_01_preset_1	uncommon	cart_01	Palanquin
+cart_02_preset_1	preset	cart_02	Best Boy
+cart_02_reward	parked	cart_02	Best Boy
+classic_01_ambient	traffic	classic_01	Ethel
+classic_01_beater	parked	classic_01	Ethel
+classic_01_bling	uncommon	classic_01	Ethel
+classic_01_preset_1	uncommon	classic_01	Ethel
+classic_01_preset_2	cheat	classic_01	Ethel
+classic_01_saints	gang	classic_01	Ethel
+classic_01_ultimate	parked	classic_01	Ethel
+classic_03_ambient	traffic	classic_03	Hollywood
+classic_03_beater	traffic	classic_03	Hollywood
+classic_03_duststorm_1	parked	classic_03	Hollywood
+classic_03_duststorm_2	parked	classic_03	Hollywood
+classic_03_preset_1	uncommon	classic_03	Hollywood
+classic_03_preset_2	parked	classic_03	Hollywood
+classic_03_tapeworm_1	parked	classic_03	Hollywood
+classic_03_tapeworm_2	parked	classic_03	Hollywood
+compact_01_ambient	traffic	compact_01	Whip
+compact_01_ambient_idol_no_roof	unlisted	compact_01_idol_stream	
+compact_01_ambient_idol_roof	parked	compact_01	Whip
+compact_01_beater	cheat	compact_01	Whip
+compact_01_ned_mission	mission	compact_01_ned	Whip
+compact_01_preset_1	traffic	compact_01	Whip
+compact_01_preset_2	traffic	compact_01	Whip
+compact_01_tapeworm_1	parked	compact_01	Whip
+compact_01_tapeworm_2	parked	compact_01	Whip
+compact_02_ambient	traffic	compact_02	Ride
+compact_02_beater	traffic	compact_02	Ride
+compact_02_eli	reward	compact_02	Ride
+compact_02_preset_1	preset	compact_02	Ride
+compact_02_riding_shotgun	unlisted	compact_02	Ride
+compact_02_saints	gang	compact_02	Ride
+compact_02_ultimate	parked	compact_02	Ride
+compact_02_wl_teach	mission	compact_02	Ride
+compact_03_ambient	traffic	compact_03	Mockingbird
+compact_03_beater	traffic	compact_03	Mockingbird
+compact_03_crew_saint	gang	compact_03	Mockingbird
+compact_03_preset_1	preset	compact_03	Mockingbird
+compact_03_preset_2	parked	compact_03	Mockingbird
+compact_05_ambient	parked	compact_05	Emu
+compact_05_beater	traffic	compact_05	Emu
+compact_05_commercial	traffic	compact_05	Emu
+compact_05_financial	traffic	compact_05	Emu
+compact_05_lets_pretend	reward	compact_05	Emu
+compact_05_pony_express	unlisted	compact_05	Emu
+compact_05_preset_1	rare	compact_05	Emu
+compact_05_preset_2	preset	compact_05	Emu
+compact_05_taxi	traffic	compact_05	Emu
+dirt_02_ambient	traffic	bike_dirt_02	Sandstorm Elite
+dirt_02_ambient_idol_a	parked	bike_dirt_02	Sandstorm Elite
+dirt_02_ambient_idol_b	parked	bike_dirt_02	Sandstorm Elite
+dirt_02_ambient_idol_c	parked	bike_dirt_02	Sandstorm Elite
+dirt_02_ambient_retro	traffic	bike_dirt_02	Sandstorm Elite
+dirt_02_ct_steal	mission	bike_dirt_02	Sandstorm Elite
+dirt_02_pony_express	unlisted	bike_dirt_02	Sandstorm Elite
+dirt_02_preset_1	uncommon	bike_dirt_02	Sandstorm Elite
+dirt_02b_idols	unlisted	bike_dirt_02b	Idols Sandstorm
+dirt_02b_preset_1	preset	bike_dirt_02b	Idols Sandstorm
+fire_01_ambient	uncommon	fire_01	Blaze
+fire_01_beater	unlisted	fire_01_repo	
+fire_01_preset_1	preset	fire_01	Blaze
+fire_01_preset_2	preset	fire_01	Blaze
+flatbed_01_ambient	traffic	flatbed_fireworks	Landbarge
+flatbed_01_beater	parked	flatbed_choplifter_statue	Landbarge
+flatbed_01_preset_1	preset	flatbed	Landbarge
+food_01_ambient	unused	foodtruck_01	Munchback
+food_01_chalupa	reward	foodtruck_taco	Chalupacabra
+food_01_chalupa_opened	unlisted	foodtruck_taco	Chalupacabra
+food_01_chicken	reward	foodtruck_chicken	Chicken a la King
+food_01_chicken_opened	unlisted	foodtruck_chicken	Chicken a la King
+food_01_ice_cream	reward	foodtruck_ice_cream	Twisty Creamy
+food_01_ice_cream_opened	unlisted	foodtruck_01	Munchback
+food_01_opened_1	parked	foodtruck_01	Munchback
+food_01_opened_2	parked	foodtruck_01	Munchback
+food_01_opened_3	parked	foodtruck_01	Munchback
+food_01_preset_1	preset	foodtruck_01	Munchback
+food_01_sushi	reward	foodtruck_sushi	Six Shooter Samurai
+food_01_sushi_opened	unlisted	foodtruck_01	Munchback
+food_01_weiner	reward	foodtruck_hot_dog	I Dream of Weenie
+food_01_weiner_opened	unlisted	foodtruck_hot_dog	I Dream of Weenie
+foodtruck_02_ambient	reward	foodtruck_02	Frying Dutchman
+foodtruck_02_preset_1	preset	foodtruck_02	Frying Dutchman
+foodtruck_02_reward	reward	foodtruck_02	Frying Dutchman
+front_loader_01_activity	unlisted	front_loader_01	Diggum
+front_loader_01_beater	parked	front_loader_01	Diggum
+front_loader_01_preset_1	preset	front_loader_01	Diggum
+garbage_01_ambient	traffic	garbage_01	Sanicruiser
+garbage_01_beater	uncommon	garbage_01	Sanicruiser
+garbage_01_pob_unlock	reward	garbage_01	Sanicruiser
+garbage_01_preset_1	preset	garbage_01	Sanicruiser
+go_cart_ambient	traffic	go_cart	Shifty
+go_cart_beater	unlisted	go_cart	Shifty
+go_cart_chopshop	script	go_cart	Shifty
+go_cart_junker	unlisted	go_cart_ms_faire_b	Shifty
+go_cart_junker_no_off_road	traffic	go_cart_ms_faire_b	Shifty
+go_cart_kart_01	cheat	go_cart	Shifty
+go_cart_kart_02	unlisted	go_cart	Shifty
+go_cart_kart_03	unlisted	go_cart	Shifty
+go_cart_marshall	reward	go_cart	Shifty
+go_cart_preset_1	preset	go_cart	Shifty
+go_cart_race_01	reward	go_cart	Shifty
+go_cart_tub	parked	go_cart	Shifty
+hearse_01_ambient	traffic	hearse_01	Reaper
+hearse_01_preset_1	preset	hearse_01	Reaper
+heli_fighter_01_ambient	traffic	heli_fighter_01	Tornado
+heli_fighter_01_marshall	parked	heli_fighter_01	Tornado
+heli_fighter_01_nahualli	unlisted	heli_fighter_01_nahualli	Intrepid
+heli_fighter_01_preset_1	preset	heli_fighter_01	Tornado
+heli_fighter_01_saints	reward	heli_fighter_01	Tornado
+heli_fighter_02_preset_1	preset	heli_fighter_02	MDI-815A
+heli_fighter_02_reward	unlisted	heli_fighter_02	MDI-815A
+heli_fighter_02_reward_2	reward	heli_fighter_02	MDI-815A
+heli_police_01_ambient	unlisted	heli_police_01	Oppressor
+heli_police_01_ct_heist	mission	heli_police_01_heist	Intrepid
+heli_police_01_idols	unlisted	heli_police_01	Oppressor
+heli_police_01_news_1	unlisted	heli_police_01	Oppressor
+heli_police_01_police	unlisted	heli_police_01	Oppressor
+heli_police_01_preset_1	preset	heli_police_01	Oppressor
+heli_police_01_saints	reward	heli_police_01	Oppressor
+heli_police_01_tether	unlisted	heli_police_01	Oppressor
+heli_standard_02_activity	unlisted	heli_standard_02_turret	Thompson
+heli_standard_02_ambient	parked	heli_standard_02	Thompson
+heli_standard_02_beater	parked	heli_standard_02	Thompson
+heli_standard_02_news_1	unlisted	heli_standard_02	Thompson
+heli_standard_02_park_ranger	parked	heli_standard_02	Thompson
+heli_standard_02_preset_1	preset	heli_standard_02	Thompson
+heli_standard_02_repo	parked	heli_standard_02	Thompson
+heli_standard_02_tether	unlisted	heli_standard_02_tier4	Thompson
+heli_standard_03_reward	reward	heli_standard_03	Galitrax
+heli_standard_03_rotorhead_reward	parked	heli_standard_03_rotorhead	Rotorhead
+hoverboard_01_ambient	reward	hoverboard_01	Prototype RTP 62-8S
+hoverboard_01_preset_1	preset	hoverboard_01	Prototype RTP 62-8S
+hoverboard_01_preset_2	preset	hoverboard_01	Prototype RTP 62-8S
+jet_ski_ambient	traffic	jet_ski	Shark
+jet_ski_beater	unlisted	jet_ski	Shark
+jet_ski_preset_1	preset	jet_ski	Shark
+jet_ski_preset_2	preset	jet_ski	Shark
+jetski_02_ambient	traffic	jetski_02	Barbados
+jetski_02_idols	traffic	jetski_02	Barbados
+jetski_02_preset_1	preset	jetski_02	Barbados
+limo_01_ambient	traffic	limo_01	Gentry
+limo_01_beater	cheat	limo_01	Gentry
+limo_01_mh_exec	mission	limo_01	Gentry
+limo_01_preset_1	traffic	limo_01	Gentry
+limo_01_preset_2	cheat	limo_01	Gentry
+limo_01_road_block	parked	limo_01	Gentry
+limo_01_saints	gang	limo_01	Gentry
+luxury_04_activity	unlisted	luxury_04	Eiswolf
+luxury_04_ambient	traffic	luxury_04	Eiswolf
+luxury_04_beater	traffic	luxury_04	Eiswolf
+luxury_04_bling	parked	luxury_04	Eiswolf
+luxury_04_ct_hq	mission	luxury_04	Eiswolf
+luxury_04_ct_road	mission	luxury_04_ct_road	Eiswolf
+luxury_04_financial	traffic	luxury_04	Eiswolf
+luxury_04_kevin	unlisted	luxury_04	Eiswolf
+luxury_04_laundromat	unlisted	luxury_04_laundromat	Eiswolf
+luxury_04_marshall	parked	luxury_04_ct_heist	Eiswolf
+luxury_04_preset_1	preset	luxury_04	Eiswolf
+luxury_04_preset_2	preset	luxury_04	Eiswolf
+monster_01_ambient	rare	monster_01	Bullpup
+monster_01_beater	rare	monster_01	Bullpup
+monster_01_preset_1	unused	monster_01	Bullpup
+monster_01_reward	reward	monster_01	Bullpup
+monster_01_unique_parking	unlisted	monster_01	Bullpup
+monster_02_ambient	cheat	monster_02	Gargantua
+monster_02_beater	unlisted	monster_02	Gargantua
+monster_02_commercial	unlisted	monster_02	Gargantua
+monster_02_commercial_2	unlisted	monster_02	Gargantua
+monster_02_panteros	unlisted	monster_02_ct_road	
+monster_02_pony_express	unlisted	monster_02	Gargantua
+monster_02_preset_1	preset	monster_02	Gargantua
+monster_02_preset_2	preset	monster_02	Gargantua
+monster_02_saints	gang	monster_02	Gargantua
+monster_03_ambient	reward	monster_03	Heavyweight
+monster_03_beater	unlisted	monster_03	Heavyweight
+monster_03_preset_1	preset	monster_03	Heavyweight
+monster_03_wastelanders	reward	monster_03	Heavyweight
+muscle_01_ambient	traffic	muscle_01	Dreadnought
+muscle_01_armored_panteros	unlisted	muscle_01_armored	Dreadnought
+muscle_01_beater	traffic	muscle_01	Dreadnought
+muscle_01_ct_want	mission	muscle_01	Dreadnought
+muscle_01_laundromat	unlisted	muscle_01_laundromat	Dreadnought
+muscle_01_panteros	parked	muscle_01	Dreadnought
+muscle_01_pn_break	gang	muscle_01	Dreadnought
+muscle_01_pony_express	unlisted	muscle_01	Dreadnought
+muscle_01_preset_1	rare	muscle_01	Dreadnought
+muscle_01_preset_2	rare	muscle_01	Dreadnought
+muscle_01_preset_3	preset	muscle_01	Dreadnought
+muscle_02_ambient	traffic	muscle_02	Hammerhead
+muscle_02_beater	uncommon	muscle_02	Hammerhead
+muscle_02_bling	uncommon	muscle_02	Hammerhead
+muscle_02_mission	mission	muscle_02	Hammerhead
+muscle_02_preset_1	preset	muscle_02	Hammerhead
+muscle_02_preset_2	preset	muscle_02	Hammerhead
+muscle_02_saints	gang	muscle_02	Hammerhead
+muscle_02_wastelanders	parked	muscle_02	Hammerhead
+muscle_03_ambient	traffic	muscle_03	Compton
+muscle_03_armored_panteros	unlisted	muscle_03_armored	
+muscle_03_beater	traffic	muscle_03	Compton
+muscle_03_neenah	reward	muscle_03	Compton
+muscle_03_neenah_tether	unlisted	muscle_03	Compton
+muscle_03_neenah_tether_special	unlisted	muscle_03	Compton
+muscle_03_panteros	parked	muscle_03	Compton
+muscle_03_panteros_b	gang	muscle_03	Compton
+muscle_03_pn_forge	reward	muscle_03	Compton
+muscle_03_preset_1	uncommon	muscle_03	Compton
+muscle_03_preset_2	uncommon	muscle_03	Compton
+muscle_03_ultimate	parked	muscle_03	Compton
+muscle_04_ambient	traffic	muscle_04	Phoenix
+muscle_04_chopshop	script	muscle_04	Phoenix
+muscle_04_neenah	unlisted	muscle_04	Phoenix
+muscle_04_preset_1	parked	muscle_04	Phoenix
+muscle_04_preset_2	preset	muscle_04	Phoenix
+muscle_04_saints	gang	muscle_04	Phoenix
+muscle_05_ambient	traffic	muscle_05	Bucket
+muscle_05_beater	unlisted	muscle_05	Bucket
+muscle_05_pony_express	unlisted	muscle_05	Bucket
+muscle_05_preset_1	preset	muscle_05	Bucket
+novelty_ned_preset_1	preset	novelty_ned	Ned's Chicken Skipper
+novelty_ned_reward	reward	novelty_ned	Ned's Chicken Skipper
+pickup_01_ambient	traffic	pickup_01	Ridgelord
+pickup_01_beater	traffic	pickup_01	Ridgelord
+pickup_01_bling	rare	pickup_01	Ridgelord
+pickup_01_crew_saint	gang	pickup_01	Ridgelord
+pickup_01_ct_pals	mission	pickup_01_ct_pals	
+pickup_01_park_ranger	uncommon	pickup_01	Ridgelord
+pickup_01_player	reward	pickup_01	Ridgelord
+pickup_01_preset_1	rare	pickup_01	Ridgelord
+pickup_01_preset_2	uncommon	pickup_01	Ridgelord
+pickup_01_riding_shotgun	unlisted	pickup_01	Ridgelord
+pickup_01_unique_parking	unlisted	pickup_01	Ridgelord
+pickup_01_wt_rv	unlisted	pickup_01	Ridgelord
+pickup_02_ambient	traffic	pickup_02	Varsity
+pickup_02_commercial	traffic	pickup_02	Varsity
+pickup_02_commercial_2	traffic	pickup_02	Varsity
+pickup_02_electric	traffic	pickup_02	Varsity
+pickup_02_pony_express	unlisted	pickup_02	Varsity
+pickup_02_preset_1	preset	pickup_02	Varsity
+pickup_02_road_block	unlisted	pickup_02	Varsity
+pickup_02_slice	parked	pickup_02	Varsity
+pickup_03_ambient	traffic	pickup_03	Skirmish
+pickup_03_marshall	unlisted	pickup_03_turret_ct_heist	
+pickup_03_marshall_offroad	unlisted	pickup_03_turret_ct_jail	
+pickup_03_preset_1	preset	pickup_03	Skirmish
+police_01_ambient	rare	police_01	Peacemaker
+police_01_police	parked	police_01	Peacemaker
+police_01_preset_1	preset	police_01	Peacemaker
+police_01_swat	unlisted	police_01	Peacemaker
+police_02_ambient	traffic	police_02	Shield
+police_02_nahualli	script	police_02	Shield
+police_02_nahualli_grunt	gang	police_02	Shield
+police_02_police	parked	police_02	Shield
+police_02_pony_express	unlisted	police_02	Shield
+police_02_preset_1	preset	police_02	Shield
+police_02_unlockable	reward	police_02	Shield
+retro_rocket_preset_1	preset	retro_rocket	Vindicator
+retro_rocket_reward	reward	retro_rocket	Vindicator
+retro_rocket_reward_2	reward	retro_rocket	Vindicator
+riot_02_ambient	unlisted	riot_02	Bunker
+riot_02_beater	unlisted	riot_02	Bunker
+riot_02_preset_1	preset	riot_02	Bunker
+riot_02_preset_2	preset	riot_02	Bunker
+riot_02_swat	unlisted	riot_02	Bunker
+sedan_01_ambient	traffic	sedan_01	Olive
+sedan_01_beater	uncommon	sedan_01	Olive
+sedan_01_bling	uncommon	sedan_01	Olive
+sedan_01_crew_saint	gang	sedan_01	Olive
+sedan_01_fbs	traffic	sedan_01	Olive
+sedan_01_financial	traffic	sedan_01	Olive
+sedan_01_kevin	script	sedan_01	Olive
+sedan_01_laundromat	unlisted	sedan_01_laundromat	Olive
+sedan_01_preset_1	preset	sedan_01	Olive
+sedan_01_preset_2	uncommon	sedan_01	Olive
+sedan_01_real_estate	unlisted	sedan_01	Olive
+sedan_01_taxi	traffic	sedan_01	Olive
+sedan_01b_preset_1	preset	sedan_01b	Saints Olive
+sedan_01b_saints	unlisted	sedan_01b	Saints Olive
+sedan_04_ambient	traffic	sedan_04	Courser
+sedan_04_beater	traffic	sedan_04	Courser
+sedan_04_chopshop	script	sedan_04	Courser
+sedan_04_cin_cobalt_blue	unlisted	sedan_04	Courser
+sedan_04_cin_light_grey	unlisted	sedan_04	Courser
+sedan_04_cin_maroon	unlisted	sedan_04	Courser
+sedan_04_laundromat	unlisted	sedan_04_laundromat	Courser
+sedan_04_pony_express	unlisted	sedan_04	Courser
+sedan_04_preset_1	uncommon	sedan_04	Courser
+sedan_04_preset_2	preset	sedan_04	Courser
+sedan_04_ultimate	parked	sedan_04	Courser
+semi_01_ambient	traffic	semi_01	Peterliner
+semi_01_beater	uncommon	semi_01	Peterliner
+semi_01_pony_express	unlisted	semi_01	Peterliner
+semi_01_preset_1	preset	semi_01	Peterliner
+semi_01_unique_parking	parked	Semi_01	
+sp_rv_01_ambient	traffic	rv_01	Buffalo
+sp_rv_01_beater	unlisted	rv_01	Buffalo
+sp_rv_01_ct_bond	mission	rv_01	Buffalo
+sp_rv_01_meth_lab	unlisted	rv_01_meth_lab	
+sp_rv_01_preset_1	preset	rv_01	Buffalo
+sp_utility_01_ambient	traffic	utility_01	Greenscaper
+sp_utility_01_beater	unlisted	utility_01	Greenscaper
+sp_utility_01_preset_1	preset	utility_01	Greenscaper
+sports_01_ambient	script	sport_01	Crisis
+sports_01_beater	unlisted	sport_01	Crisis
+sports_01_bling	rare	sport_01	Crisis
+sports_01_chopshop	script	sport_01	Crisis
+sports_01_eli	unlisted	sport_01	Crisis
+sports_01_pony_express	unlisted	sport_01	Crisis
+sports_01_preset_1	cheat	sport_01	Crisis
+sports_01_preset_2	traffic	sport_01	Crisis
+sports_02_ambient	traffic	sport_02	Galahad
+sports_02_laundromat	unlisted	sport_02	Galahad
+sports_02_preset_1	preset	sport_02	Galahad
+sports_02_slice	unlisted	sport_02	Galahad
+sports_02_unique_parking	parked	sport_02	Galahad
+sports_03_ambient	traffic	sport_03	Raycaster
+sports_03_beater	unlisted	sport_03	Raycaster
+sports_03_bling	traffic	sport_03	Raycaster
+sports_03_financial	traffic	sport_03	Raycaster
+sports_03_preset_1	cheat	sport_03	Raycaster
+sports_03_preset_2	traffic	sport_03	Raycaster
+sports_03_saints	gang	sport_03	Raycaster
+sports_03_ultimate	parked	sport_03	Raycaster
+standard_01_ambient	traffic	van_01	Barracas
+standard_01_beater	unlisted	van_01	Barracas
+standard_01_commercial	traffic	van_01	Barracas
+standard_01_commercial_2	traffic	van_01	Barracas
+standard_01_crew_saint	gang	Van_01	
+standard_01_pob_unlock	reward	Van_01	
+standard_01_preset_1	preset	van_01	Barracas
+standard_01_preset_2	preset	van_01	Barracas
+standard_01_saints	gang	Van_01	
+standard_01_surveillance_1	unlisted	van_01	Barracas
+standard_01_surveillance_2	unlisted	van_01	Barracas
+standard_01_surveillance_3	unlisted	van_01	Barracas
+standard_02_ambient	traffic	van_02	Porter
+standard_02_commercial	uncommon	van_02	Porter
+standard_02_laundromat	unlisted	van_02	Porter
+standard_02_news_1	rare	van_02	Porter
+standard_02_news_2	rare	van_02	Porter
+standard_02_news_3	uncommon	van_02	Porter
+standard_02_pob_unlock	reward	van_02	Porter
+standard_02_preset_1	uncommon	van_02	Porter
+standard_02_unique_parking	parked	van_02	Porter
+street_01_ambient	traffic	bike_street_01	Snake
+street_01_beater	unlisted	bike_street_01	Snake
+street_01_panteros	parked	bike_street_01	Snake
+street_01_panteros_b	unlisted	bike_street_01	Snake
+street_01_preset_1	preset	bike_street_01	Snake
+street_01_preset_2	preset	bike_street_01	Snake
+street_01b_panteros	unlisted	bike_street_01b	Panteros Snake
+street_01b_preset_1	preset	bike_street_01b	Panteros Snake
+super_01_ambient	traffic	supercar_01	Attrazione
+super_01_laundromat	unlisted	supercar_01_laundromat	Attrazione
+supercar_01_beater	unlisted	supercar_01	Attrazione
+supercar_01_bling	traffic	supercar_01	Attrazione
+supercar_01_chopshop	script	supercar_01	Attrazione
+supercar_01_pob_unlock	reward	supercar_01	Attrazione
+supercar_01_pony_express	unlisted	supercar_01	Attrazione
+supercar_01_preset_1	preset	supercar_01	Attrazione
+supercar_01_preset_2	preset	supercar_01	Attrazione
+supercar_01_preset_3	preset	supercar_01	Attrazione
+supercar_01_saints	gang	supercar_01	Attrazione
+supercar_02_ambient	traffic	supercar_02	Fer de Lance
+supercar_02_bling	rare	supercar_02	Fer de Lance
+supercar_02_chopshop	script	supercar_02	Fer de Lance
+supercar_02_preset_1	uncommon	supercar_02	Fer de Lance
+supercar_02_preset_2	uncommon	supercar_02	Fer de Lance
+suv_01_ambient	traffic	suv_01	Saguaro
+suv_01_bling	uncommon	suv_01	Saguaro
+suv_01_pob_unlock	reward	SUV_01	
+suv_01_pony_express	unlisted	suv_01	Saguaro
+suv_01_preset_1	uncommon	suv_01	Saguaro
+suv_01_unique_parking	traffic	suv_01	Saguaro
+suv_08_ambient	traffic	suv_08	Gibraltar
+suv_08_beater	traffic	suv_08	Gibraltar
+suv_08_bling	rare	suv_08	Gibraltar
+suv_08_financial	traffic	suv_08	Gibraltar
+suv_08_preset_1	preset	suv_08	Gibraltar
+suv_08_preset_2	rare	suv_08	Gibraltar
+suv_08_saints	gang	suv_08	Gibraltar
+suv_08_unique_parking	rare	suv_08	Gibraltar
+suv__police_01_ambient	traffic	suv_police_01	Vigilance
+suv__police_01_financial	traffic	suv_police_01	Vigilance
+suv__police_01_police	parked	suv_police_01	Vigilance
+suv__police_01_preset_1	traffic	suv_police_01	Vigilance
+suv__police_01_swat	gang	suv_police_01	Vigilance
+tank_01_ambient	unlisted	tank_01	Adversary
+tank_01_police	gang	tank_01	Adversary
+tank_01_preset_1	preset	tank_01	Adversary
+tank_02_ambient	reward	tank_02	MDI-344T
+tank_02_mh_pay	mission	tank_mh_pay_01	
+tank_02_preset_1	preset	tank_02	MDI-344T
+tank_03_ambient	unlisted	tank_03	Maximillian
+tank_03_pob_unlock	reward	tank_03	Maximillian
+tank_03_preset_1	preset	tank_03	Maximillian
+tinfoil_preset_1	preset	tinfoil_car	Potato
+tinfoil_preset_2	preset	tinfoil_car	Potato
+tinfoil_reward	reward	tinfoil_car	Potato
+truck_armored_01_ambient	unlisted	truck_armored_01	Titan
+truck_armored_01_casino	unlisted	truck_armored_01	Titan
+truck_armored_01_marshall	unlisted	truck_armored_01	Titan
+truck_armored_01_preset_1	preset	truck_armored_01	Titan
+truck_armored_01_saints	gang	truck_armored_01	Titan
+truck_base_ambient	unlisted	truck_base_planet_saints	Mule
+truck_base_ambient_cargo	traffic	truck_base_planet_saints	Mule
+truck_base_ambient_flatbed	unlisted	truck_base_planet_saints	Mule
+truck_base_beater	unlisted	truck_base_planet_saints	Mule
+truck_base_clothing_rival	script	truck_base_planet_saints	Mule
+truck_base_marshall	unlisted	truck_base_planet_saints	Mule
+truck_base_panteros	unlisted	truck_base_planet_saints	Mule
+truck_base_pob_unlock	reward	truck_base	Mule
+truck_base_preset_1	preset	truck_base_planet_saints	Mule
+truck_base_preset_2	preset	truck_base_planet_saints	Mule
+truck_base_tanker	parked	truck_base_planet_saints	Mule
+truck_classic_01_ambient	traffic	truck_classic_01	Grandad
+truck_classic_01_beater	unlisted	truck_classic_01	Grandad
+truck_classic_01_bling	parked	truck_classic_01	Grandad
+truck_classic_01_pony_express	unlisted	truck_classic_01	Grandad
+truck_classic_01_preset_1	preset	truck_classic_01	Grandad
+truck_classic_01_preset_2	preset	truck_classic_01	Grandad
+truck_classic_01_saints	gang	truck_classic_01	Grandad
+truck_classic_01_ultimate	parked	truck_classic_01	Grandad
+truck_classic_02_ambient	parked	truck_classic_02	Lexington
+truck_classic_02_beater	traffic	truck_classic_02	Lexington
+truck_classic_02_panteros	parked	truck_classic_02_turret	Lexington
+truck_classic_02_panteros_b	gang	truck_classic_02_turret	Lexington
+truck_classic_02_pony_express	unlisted	truck_classic_02	Lexington
+truck_classic_02_preset_1	preset	truck_classic_02	Lexington
+truck_classic_02_preset_2	preset	truck_classic_02	Lexington
+truck_classic_02_wt_mech	unlisted	truck_classic_02	Lexington
+truck_classic_frost_preset_1	preset	truck_classic_frost	Frosty Grandad
+truck_classic_frost_reward	reward	truck_classic_frost	Frosty Grandad
+truck_classic_kraken_preset_1	preset	truck_classic_kraken	Sandy Grandad
+truck_classic_kraken_reward	reward	truck_classic_kraken	Sandy Grandad
+two_fronts_preset_1	preset	two_fronts	Hollybird
+two_fronts_preset_2	preset	two_fronts	Hollybird
+two_fronts_reward	unlisted	two_fronts	Hollybird
+two_frontz_reward	custom	two_frontz	Two Frontz
+van_04_ambient	traffic	van_04	Sojourn
+van_04_preset_1	uncommon	van_04	Sojourn
+van_04_ultimate	parked	van_04	Sojourn
+van_04_wl_bowel	mission	van_04	Sojourn
+vanguard_apc_01_ambient	unlisted	vanguard_sp_apc_01	
+vanguard_apc_01_opened_1	unlisted	vanguard_sp_apc_01	
+vanguard_heli_fighter_01_marshall	unlisted	vanguard_heli_fighter_01	
+vanguard_heli_fighter_01_nahualli	unlisted	vanguard_heli_fighter_01	
+vanguard_vtol_02_ambient	unlisted	vanguard_vtol_02	
+vanguard_vtol_02_damaged_ambient	reward	vanguard_vtol_02_damaged	
+veh_bike_moped_01__ambient	rare	bike_moped_01	Widowmaker
+veh_bike_moped_01__beater	unlisted	bike_moped_01	Widowmaker
+veh_bike_moped_01_preset_1	traffic	bike_moped_01	Widowmaker
+veh_bike_moped_01_reward	reward	bike_moped_01	Widowmaker
+veh_bike_street_02__ambient	traffic	bike_street_02	Estrada
+veh_bike_street_02__police	parked	bike_street_02	Estrada
+veh_bike_street_02__preset_1	preset	bike_street_02	Estrada
+veh_bike_street_02__preset_2	preset	bike_street_02	Estrada
+veh_bike_street_02_saints	gang	bike_street_02	Estrada
+veh_bike_street_02_ultimate	parked	bike_street_02	Estrada
+veh_sp_front_loader_01__ambient	unlisted	front_loader_01	Diggum
+veh_truck_2dr_tow_01_ambient	rare	truck_tow_01	Shaft
+veh_truck_2dr_tow_01_beater	traffic	truck_tow_01	Shaft
+veh_truck_2dr_tow_01_preset_1	preset	truck_tow_01	Shaft
+veh_truck_2dr_tow_01_preset_2	preset	truck_tow_01	Shaft
+veh_truck_2dr_tow_01_repo	reward	truck_tow_01	Shaft
+vtol_02_ambient	reward	vtol_02	MDI-921V
+vtol_02_preset_1	preset	vtol_02	MDI-921V
+vtol_bike_01_ambient	gang	vtol_bike_01	MDI-707B
+vtol_bike_01_preset_1	preset	vtol_bike_01	MDI-707B
+vtol_bike_01_saints	gang	vtol_bike_01	MDI-707B
+wagon_01_preset_1	preset	wagon_01	Schooner
+wagon_01_preset_2	preset	wagon_01	Schooner
+wagon_01_unlockable	reward	wagon_01	Schooner
+wagon_02_preset_1	preset	wagon_02	Ferryman
+wagon_02_preset_2	preset	wagon_02	Ferryman
+wagon_02_reward	unlisted	wagon_02	Ferryman
+wagon_09_preset_1	preset	wagon_09	Santa's Truckster
+wagon_09_reward	reward	wagon_09	Santa's Truckster
