@@ -46,6 +46,105 @@ namespace Sr5Save
         }
     }
 
+    public sealed class NamedSlot
+    {
+        public string Label;
+        public string[] Options;
+    }
+
+    public sealed class VehicleAxle
+    {
+        public string Name, Rim, Tire;
+        public string MinSize, MaxSize, DefaultSize, MinWidth, MaxWidth;
+    }
+
+    public sealed class VehicleOptions
+    {
+        public string Display = "", Underglow;
+        public List<NamedSlot> Parts = new List<NamedSlot>(), Wraps = new List<NamedSlot>();
+        public List<string> Links = new List<string>();
+        public List<VehicleAxle> Axles = new List<VehicleAxle>();
+    }
+
+    // Each vehicle's real parts, wraps, wheels and underglow, and the game's sounds, from its own tables.
+    public static class VehicleTables
+    {
+        static Dictionary<string, VehicleOptions> vehicles;
+        static Dictionary<string, string[]> rims, tires, glows;
+        static Dictionary<string, List<Choice>> sounds;
+
+        static void Load()
+        {
+            if (vehicles != null) return;
+            vehicles = new Dictionary<string, VehicleOptions>(StringComparer.OrdinalIgnoreCase);
+            rims = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase);
+            tires = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase);
+            glows = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase);
+            sounds = new Dictionary<string, List<Choice>>();
+            foreach (string line in Resources.Lines("vehicle_tables.txt"))
+            {
+                string[] p = line.Split('\t');
+                switch (p[0])
+                {
+                    case "A": if (p.Length >= 3) Vehicle(p[1]).Display = p[2]; break;
+                    case "P": if (p.Length == 5) Set(Vehicle(p[1]).Parts, p[2], p[3], p[4]); break;
+                    case "T": if (p.Length == 5) Set(Vehicle(p[1]).Wraps, p[2], p[3], p[4]); break;
+                    case "L":
+                        if (p.Length == 4)
+                        {
+                            List<string> links = Vehicle(p[1]).Links;
+                            int at = int.Parse(p[2]);
+                            while (links.Count <= at) links.Add("");
+                            links[at] = p[3];
+                        }
+                        break;
+                    case "W":
+                        if (p.Length == 11)
+                            Vehicle(p[1]).Axles.Add(new VehicleAxle { Name = p[3], MinSize = p[4], MaxSize = p[5], DefaultSize = p[6], MinWidth = p[7], MaxWidth = p[8], Rim = p[9], Tire = p[10] });
+                        break;
+                    case "U": if (p.Length == 3) Vehicle(p[1]).Underglow = p[2]; break;
+                    case "G": if (p.Length == 3) glows[p[1]] = p[2].Split('|'); break;
+                    case "R": if (p.Length == 3) rims[p[1]] = p[2].Split('|'); break;
+                    case "I": if (p.Length == 3) tires[p[1]] = p[2].Split('|'); break;
+                    case "H":
+                        if (p.Length == 4)
+                        {
+                            List<Choice> list;
+                            if (!sounds.TryGetValue(p[1], out list)) sounds[p[1]] = list = new List<Choice>();
+                            list.Add(new Choice { Value = uint.Parse(p[2], NumberStyles.HexNumber), Text = p[3] });
+                        }
+                        break;
+                }
+            }
+        }
+
+        static VehicleOptions Vehicle(string name)
+        {
+            VehicleOptions v;
+            if (!vehicles.TryGetValue(name, out v)) vehicles[name] = v = new VehicleOptions();
+            return v;
+        }
+
+        static void Set(List<NamedSlot> list, string index, string label, string options)
+        {
+            int at = int.Parse(index);
+            while (list.Count <= at) list.Add(null);
+            list[at] = new NamedSlot { Label = label, Options = options.Length == 0 ? new string[0] : options.Split('|') };
+        }
+
+        public static VehicleOptions Find(string info)
+        {
+            Load();
+            VehicleOptions v;
+            return info != null && vehicles.TryGetValue(info, out v) ? v : null;
+        }
+
+        public static string[] Glow(string set) { Load(); string[] v; return set != null && glows.TryGetValue(set, out v) ? v : null; }
+        public static string[] Rim(string set) { Load(); string[] v; return set != null && rims.TryGetValue(set, out v) ? v : null; }
+        public static string[] Tire(string set) { Load(); string[] v; return set != null && tires.TryGetValue(set, out v) ? v : null; }
+        public static List<Choice> Sounds(string field) { Load(); List<Choice> v; return sounds.TryGetValue(field, out v) ? v : null; }
+    }
+
     public static class Options
     {
         static Dictionary<string, string> notes;
@@ -92,8 +191,10 @@ namespace Sr5Save
                         if (ownedOnly && r.Child("m_purchased") != null && r.Child("m_purchased").Value == 0) continue;
                         list.Add(new Choice { Value = r.Key, Text = r.Id });
                     }
+                List<Choice> known = VehicleTables.Sounds(field);
+                if (known != null) list.AddRange(known);
                 List<Choice> seen;
-                if (seenChoices.TryGetValue(field, out seen)) list.AddRange(seen);
+                if (seenChoices.TryGetValue(field, out seen)) list.AddRange(seen.Where(c => !list.Any(x => x.Value == c.Value)));
                 list = list.OrderBy(c => c.Text, StringComparer.OrdinalIgnoreCase).ToList();
                 list.Insert(0, new Choice { Value = 0, Text = "(none)" });
                 cache[field] = list;
@@ -103,9 +204,19 @@ namespace Sr5Save
             return list;
         }
 
+        static readonly Dictionary<string, string> FriendlyFields = new Dictionary<string, string>
+        {
+            { "m_engine_audio", "Engine sound" }, { "m_tranny_audio", "Transmission" }, { "m_siren_audio", "Siren" }, { "m_horn_audio", "Horn" },
+            { "m_rim_variant_idx", "Rim" }, { "m_tire_variant_idx", "Tire" }, { "m_tire_profile", "Tire profile" }, { "m_torque_level", "Engine level" },
+            { "m_frame_level", "Frame level" }, { "m_bumper_level", "Bumper level" }, { "m_tire_level", "Tires level" }, { "m_nitro_level", "Nitro level" },
+            { "m_color_choice", "Colour" }, { "m_vehicle_info", "Vehicle" }, { "m_variant_info", "Model" }, { "m_reward_variant", "Reward model" },
+            { "m_plate_seed", "Licence plate" }, { "m_paint_selection", "Paint choice" }
+        };
+
         static string Label(string field)
         {
-            return Names.Pretty(field);
+            string s;
+            return FriendlyFields.TryGetValue(field, out s) ? s : Names.Pretty(field);
         }
 
         static List<Choice> NumberChoices(int max)
@@ -126,7 +237,7 @@ namespace Sr5Save
             {
                 row.Kind = OptionKind.Choice;
                 row.Choices = ChoicesFor(g, cache, n.FieldName, n.Value);
-                if (row.Note == null) row.Note = "Choose from the list, or use All data to type a name.";
+                if (row.Note == null) row.Note = "Choose from the list.";
             }
             return row;
         }
@@ -223,6 +334,20 @@ namespace Sr5Save
             return row;
         }
 
+        // Offers a list where the value is a position in it. A value outside the list, such as -1 for unset, stays visible.
+        static void NameIt(OptionRow row, string[] labels, string unset)
+        {
+            if (labels == null || labels.Length == 0) return;
+            List<Choice> list = new List<Choice>();
+            for (int i = 0; i < labels.Length; i++) list.Add(new Choice { Value = (uint)i, Text = labels[i] });
+            uint current = row.Node.Value;
+            if (current >= labels.Length)
+                list.Insert(0, new Choice { Value = current, Text = current == uint.MaxValue ? unset : "Number " + current });
+            row.Kind = OptionKind.Choice;
+            row.Choices = list;
+            row.Note = labels.Length + " to choose from.";
+        }
+
         static string VehicleSection(string path)
         {
             if (path.Contains("m_material_data")) return null;     // named per material as it goes
@@ -244,7 +369,9 @@ namespace Sr5Save
             LoadData();
             List<OptionRow> rows = new List<OptionRow>();
             Dictionary<string, List<Choice>> cache = new Dictionary<string, List<Choice>>();
-            WalkVehicle(g, cache, slot, "", "", rows);
+            Node info = slot.Child("m_vehicle_info");
+            VehicleOptions named = info == null ? null : VehicleTables.Find(Names.Find(info.Value));
+            WalkVehicle(g, cache, named, slot, "", "", rows);
             string[] order = { "Vehicle", "Performance", "Sound", "Paint and finish", "Wraps and decals", "Parts", "Part slots", "Linked parts", "Wheels", "Offroad wheels", "Underglow" };
             return rows.OrderBy(r =>
             {
@@ -253,7 +380,7 @@ namespace Sr5Save
             }).ToList();
         }
 
-        static void WalkVehicle(GameSave g, Dictionary<string, List<Choice>> cache, Node n, string path, string notePath, List<OptionRow> rows)
+        static void WalkVehicle(GameSave g, Dictionary<string, List<Choice>> cache, VehicleOptions named, Node n, string path, string notePath, List<OptionRow> rows)
         {
             foreach (Node c in n.Children)
             {
@@ -263,7 +390,7 @@ namespace Sr5Save
                 if (c.Kind == NodeKind.Struct)
                 {
                     if (field == "components") { rows.Add(TupleRow(c, VehicleSection(p), "Glow color", p)); continue; }
-                    WalkVehicle(g, cache, c, p, np, rows);
+                    WalkVehicle(g, cache, named, c, p, np, rows);
                 }
                 else if (c.Kind == NodeKind.Array)
                 {
@@ -273,14 +400,15 @@ namespace Sr5Save
                     {
                         Node e = c.Children[i];
                         string ep = p + "[" + i + "]";
-                        if (e.Kind == NodeKind.Scalar) rows.Add(Scalar(g, cache, e, VehicleSection(p), ArrayLabel(field, i), ep, np + "[]"));
-                        else if (e.Kind == NodeKind.Struct) WalkAxle(g, cache, e, p, np + "[]", i, rows);
+                        if (e.Kind == NodeKind.Scalar) rows.Add(ListRow(g, cache, named, e, field, i, VehicleSection(p), ep, np + "[]"));
+                        else if (e.Kind == NodeKind.Struct) WalkAxle(g, cache, named, e, field, p, np + "[]", i, rows);
                     }
                 }
                 else if (c.Kind == NodeKind.Scalar)
                 {
                     OptionRow row = Scalar(g, cache, c, VehicleSection(p), Label(field), p, np);
                     if (IsLevel(field)) { row.Kind = OptionKind.Choice; row.Choices = NumberChoices(field == "m_nitro_level" ? 1 : 3); }
+                    if (field == "m_color_choice" && named != null) NameIt(row, VehicleTables.Glow(named.Underglow), "(no colour set)");
                     rows.Add(row);
                 }
             }
@@ -289,6 +417,23 @@ namespace Sr5Save
         static bool IsLevel(string field)
         {
             return field == "m_torque_level" || field == "m_frame_level" || field == "m_bumper_level" || field == "m_tire_level" || field == "m_nitro_level";
+        }
+
+        // A part, wrap or link: named from this vehicle's own tables when they cover it.
+        static OptionRow ListRow(GameSave g, Dictionary<string, List<Choice>> cache, VehicleOptions named, Node e, string field, int i, string section, string path, string notePath)
+        {
+            NamedSlot slot = null;
+            if (named != null)
+            {
+                List<NamedSlot> list = field == "m_vid_slot_selection" ? named.Parts : field == "m_mat_tex_selection" ? named.Wraps : null;
+                if (list != null && i < list.Count) slot = list[i];
+            }
+            string label = ArrayLabel(field, i);
+            if (slot != null) label = slot.Label.StartsWith("vehcust_tether") ? "Tether" : slot.Label;
+            else if (named != null && field == "m_linked_data" && i < named.Links.Count && named.Links[i].Length > 0) label = named.Links[i];
+            OptionRow row = Scalar(g, cache, e, section, label, path, notePath);
+            if (slot != null) NameIt(row, slot.Options, "(game's default)");
+            return row;
         }
 
         static string ArrayLabel(string field, int i)
@@ -303,12 +448,23 @@ namespace Sr5Save
             return Label(field) + " " + (i + 1);
         }
 
-        static void WalkAxle(GameSave g, Dictionary<string, List<Choice>> cache, Node e, string path, string notePath, int index, List<OptionRow> rows)
+        static void WalkAxle(GameSave g, Dictionary<string, List<Choice>> cache, VehicleOptions named, Node e, string arrayField, string path, string notePath, int index, List<OptionRow> rows)
         {
-            string axle = index == 0 ? "Front: " : index == 1 ? "Rear: " : "Axle " + (index + 1) + ": ";
+            VehicleAxle axle = named != null && index < named.Axles.Count ? named.Axles[index] : null;
+            string prefix = index == 0 ? "Front: " : index == 1 ? "Rear: " : "Axle " + (index + 1) + ": ";
             foreach (Node f in e.Children)
-                if (f.Kind == NodeKind.Scalar)
-                    rows.Add(Scalar(g, cache, f, VehicleSection(path), axle + Label(f.FieldName), path + "[" + index + "]." + f.FieldName, notePath + "." + f.FieldName));
+            {
+                if (f.Kind != NodeKind.Scalar) continue;
+                OptionRow row = Scalar(g, cache, f, VehicleSection(path), prefix + Label(f.FieldName), path + "[" + index + "]." + f.FieldName, notePath + "." + f.FieldName);
+                if (axle != null && arrayField == "m_normal_axles")
+                {
+                    if (f.FieldName == "m_wheel_size") row.Note = "The game's range: " + axle.MinSize + " to " + axle.MaxSize + ", normally " + axle.DefaultSize + ". 0 uses the normal size.";
+                    else if (f.FieldName == "m_wheel_width") row.Note = "The game's range: " + axle.MinWidth + " to " + axle.MaxWidth + ". 0 uses the normal width.";
+                }
+                if (axle != null && f.FieldName == "m_rim_variant_idx") NameIt(row, VehicleTables.Rim(axle.Rim), "(game's default)");
+                else if (axle != null && f.FieldName == "m_tire_variant_idx") NameIt(row, VehicleTables.Tire(axle.Tire), "(game's default)");
+                rows.Add(row);
+            }
         }
 
         // Materials are named by what they paint, so an option means the same thing on any car with that material.

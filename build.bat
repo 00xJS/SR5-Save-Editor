@@ -3,7 +3,7 @@ rem Builds SR5-Save-Editor.exe and build\Tests.exe with the C# compiler that com
 setlocal
 set "CSC=%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
 set "ROOT=%~dp0"
-set "RES=/resource:"%ROOT%data\names.txt",names.txt /resource:"%ROOT%data\weapons.txt",weapons.txt /resource:"%ROOT%data\vehicles.txt",vehicles.txt /resource:"%ROOT%data\vehicle_variants.txt",vehicle_variants.txt /resource:"%ROOT%data\garage_options.txt",garage_options.txt /resource:"%ROOT%data\custom_items.txt",custom_items.txt"
+set "RES=/resource:"%ROOT%data\names.txt",names.txt /resource:"%ROOT%data\weapons.txt",weapons.txt /resource:"%ROOT%data\vehicles.txt",vehicles.txt /resource:"%ROOT%data\vehicle_variants.txt",vehicle_variants.txt /resource:"%ROOT%data\garage_options.txt",garage_options.txt /resource:"%ROOT%data\custom_items.txt",custom_items.txt /resource:"%ROOT%data\vehicle_tables.txt",vehicle_tables.txt /resource:"%ROOT%data\display_names.txt",display_names.txt /resource:"%ROOT%data\table_names.txt",table_names.txt"
 if exist "%ROOT%data\catalog.bin" set "RES=%RES% /resource:"%ROOT%data\catalog.bin",catalog.bin"
 if not exist "%ROOT%build" mkdir "%ROOT%build"
 

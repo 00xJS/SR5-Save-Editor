@@ -333,7 +333,7 @@ namespace Sr5Save
         {
             if (binding || save == null) return;
             WeaponEntry e = grid.CurrentRow == null ? null : grid.CurrentRow.Tag as WeaponEntry;
-            options.ShowRows(e == null ? "No weapon picked" : Names.Pretty(e.Info.Name),
+            options.ShowRows(e == null ? "No weapon picked" : e.Label,
                 e == null || e.Record == null ? new List<OptionRow>() : Options.ForRecord(save, e.Record, "Weapon"));
         }
 
@@ -359,7 +359,7 @@ namespace Sr5Save
             foreach (WeaponEntry e in entries)
             {
                 if (!showAll.Checked && e.Info.Kind != "shop") continue;
-                string label = Names.Pretty(e.Info.Name);
+                string label = e.Label;
                 if (f.Length > 0 && label.IndexOf(f, StringComparison.OrdinalIgnoreCase) < 0 && e.Info.Name.IndexOf(f, StringComparison.OrdinalIgnoreCase) < 0) continue;
                 int i = grid.Rows.Add();
                 grid.Rows[i].Tag = e;
@@ -375,7 +375,7 @@ namespace Sr5Save
             WeaponEntry e = (WeaponEntry)row.Tag;
             Node r = e.Record;
             row.Cells[0].Value = r != null && Val(r, "m_player_unlocked") != 0;
-            row.Cells[1].Value = Names.Pretty(e.Info.Name);
+            row.Cells[1].Value = e.Label;
             row.Cells[2].Value = Math.Min(3, r == null ? 0 : Val(r, "m_stat_level_purchased")).ToString();
             Node mods = r == null ? null : r.Child("m_equipped_mod_levels");
             row.Cells[3].Value = mods == null ? "" : string.Join(",", mods.Children.Select(c => c.Value.ToString()));
@@ -648,7 +648,7 @@ namespace Sr5Save
                 UnlockEntry e = shown[a.RowIndex];
                 VariantInfo v = VariantTable.Find(e.Id);
                 if (a.ColumnIndex == 0) a.Value = save.IsOwned(Current, e);
-                else if (a.ColumnIndex == 1) a.Value = (v != null ? v.Label : Names.Pretty(e.Id)) + (CustomItems.IsCustom(e.Id) ? "  (your mod)" : "");
+                else if (a.ColumnIndex == 1) a.Value = (v != null ? v.Label : Names.Label(e.Id)) + (CustomItems.IsCustom(e.Id) ? "  (your mod)" : "");
                 else if (a.ColumnIndex == 2) a.Value = v != null ? v.How : "";
                 else a.Value = e.Record != null ? "Yes" : "Added when owned";
             };
@@ -724,7 +724,7 @@ namespace Sr5Save
             shown = f.Length == 0 ? all : all.Where(e =>
             {
                 VariantInfo v = VariantTable.Find(e.Id);
-                return e.Id.IndexOf(f, StringComparison.OrdinalIgnoreCase) >= 0 || Names.Pretty(e.Id).IndexOf(f, StringComparison.OrdinalIgnoreCase) >= 0
+                return e.Id.IndexOf(f, StringComparison.OrdinalIgnoreCase) >= 0 || Names.Label(e.Id).IndexOf(f, StringComparison.OrdinalIgnoreCase) >= 0
                     || (v != null && (v.Label.IndexOf(f, StringComparison.OrdinalIgnoreCase) >= 0 || v.How.IndexOf(f, StringComparison.OrdinalIgnoreCase) >= 0));
             }).ToList();
             grid.Columns[2].Visible = Current != null && Current.Struct == "vehicle_variant_entry_state";

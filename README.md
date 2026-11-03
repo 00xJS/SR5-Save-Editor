@@ -7,10 +7,11 @@ Every value in your save is here to change: money, weapons, vehicles, your chara
 ## What it edits
 
 - **Overview:** cash, XP, level, empire tier, waiting cash, Boot Hill coins and XP, where you start, the "used cheats" mark.
-- **Weapons:** own any weapon, and set its level, upgrades and ultimate. Pick one for its skin, material, ammo and every other option.
-- **Garage:** add and remove vehicles, and upgrade them. Pick a car for every option it has: performance, sound, paint and finish
-  with colour pickers, each material, wraps, parts, wheels and underglow. Set one option on every car, or copy a look between cars
-  of the same vehicle.
+- **Weapons:** own any weapon by its in-game name, and set its level, upgrades and ultimate. Pick one for its skin, material, ammo and
+  every other option.
+- **Garage:** add and remove vehicles, and upgrade them. Pick a car for every option it has, using the game's own lists and names:
+  exhaust, hood, spoiler and every other part, rims and tires, wheel sizes with the game's limits, engine sound, horn, siren, wraps and
+  decals, underglow colours, and paint with colour pickers. Set one option on every car, or copy a look between cars of the same vehicle.
 - **Character:** skin, every outfit slot and what's in it, body and voice.
 - **Loadout:** difficulty sliders, equipped perks, emotes and HQ theme.
 - **Unlocks:** skills, perks and slots, emotes, clothing, weapon skins and decals, vehicle models, parts and paint, HQ props, gang
@@ -38,8 +39,8 @@ Every **Save** first copies your files to `%LOCALAPPDATA%\SR5SaveEditor\backups`
 
 - **Keep your runs apart.** All saves share `AUTOSAVE1` and `AUTOSAVE2`, so make a manual save of a run you care about before
   playing another.
-- **Try values and look.** Parts, wraps and wheels are numbered per vehicle. The About column shows the values real saves use, and `?`
-  marks a value a stock car hasn't set yet.
+- **About column:** it shows how many choices an option has, the game's limits, or the values real saves use. A `?` marks a value a stock
+  car hasn't set yet.
 - **DLC items come with their pack.** The Merry Saintsmas pack, for example, brings Santa's Truckster, its clothing and three emotes.
 - **Add XP to level up.** The game levels you up on your next XP gain and gives each level's rewards.
 - **Epic cloud saves:** your saves are in a folder Epic can sync. To keep full control of your files, you can turn cloud saves off for
@@ -57,6 +58,7 @@ Every **Save** first copies your files to `%LOCALAPPDATA%\SR5SaveEditor\backups`
 |---|---|
 | `names.txt`, `weapons.txt`, `vehicles.txt`, `vehicle_variants.txt`, `garage_options.txt` | `python -I tools\gen_data.py SAVES GAME SR5_TWEAKS` (your saves, the game files, the SR5-Tweaks research) |
 | `catalog.bin` | `build\Tests.exe --build-catalog SAVES data\catalog.bin`: blank records for items a save can gain, with player data removed |
+| `vehicle_tables.txt`, `display_names.txt`, `table_names.txt` | `python -I tools\gen_tables.py SR5_TWEAKS_TOOLS SAVES`: each vehicle's parts, wraps, wheels and sounds, and English names, from the game's own tables |
 | `custom_items.txt` | By hand: names from your own mods |
 
 Rebuild after regenerating them. Your own saves go in `samples\original`, which stays on your PC.
@@ -80,6 +82,7 @@ Against every save in `samples\original`:
 - Unlock everything works on every save and stays within the file's size.
 - Damaged files and oversized saves are caught before anything is written, and backups hold the original.
 - `tools\sr5save.py`, a separate decoder that shares no code with the editor, reads all of the editor's output.
+- Every part, wrap, rim, tire and sound in every car in those saves matches a real entry in the game's tables.
 
 `SR5-Save-Editor.exe --ui-check SAVE OUTDIR` opens the real window off-screen with a copy of a save, draws each screen to a
 PNG, edits through the controls, saves, and reads the result back.

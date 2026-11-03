@@ -382,6 +382,60 @@ namespace Sr5Save
             Check(was == null || was.Child("m_equipped").Value == 0, "old perk is unequipped");
         }
 
+        // Every part and wrap chosen on every car in real saves has to be a real option in the game's tables.
+        static void GarageOptionsAreReal(string[] saves)
+        {
+            int cars = 0, parts = 0, wraps = 0, unset = 0, off = 0, unnamed = 0, sounds = 0, soundsNamed = 0, glow = 0, wheels = 0, wheelsOff = 0, wheelsUnset = 0;
+            foreach (string path in saves)
+            {
+                GameSave g = GameSave.Load(path);
+                foreach (Node slot in g.GarageSlots())
+                {
+                    string info = Names.Find(slot.Child("m_vehicle_info").Value);
+                    VehicleOptions named = VehicleTables.Find(info);
+                    if (named == null) { unnamed++; continue; }
+                    bool customized = slot.Child("m_has_customization").Value != 0;
+                    if (customized) cars++;
+                    foreach (OptionRow r in Options.ForVehicle(g, slot))
+                    {
+                        if (r.Path.Contains("_audio") && r.Node.Value != 0)
+                        {
+                            sounds++;
+                            Choice c = r.Choices.First(x => x.Value == r.Node.Value);
+                            if (!c.Text.StartsWith("As on") && c.Text != r.Node.Value.ToString("x8")) soundsNamed++;
+                        }
+                        if (r.Path.EndsWith("m_rim_variant_idx") || r.Path.EndsWith("m_tire_variant_idx"))
+                        {
+                            wheels++;
+                            if (r.Node.Value == uint.MaxValue) wheelsUnset++;
+                            else if (r.Kind != OptionKind.Choice || r.Choices.First(x => x.Value == r.Node.Value).Text.StartsWith("Number "))
+                            {
+                                wheelsOff++;
+                                if (wheelsOff <= 8) Console.WriteLine("    wheel outside its list: " + info + " " + r.Path + " = " + r.Node.Text);
+                            }
+                        }
+                        bool part = r.Path.Contains("m_vid_slot_selection"), wrap = r.Path.Contains("m_mat_tex_selection");
+                        if (r.Path.Contains("m_color_choice") && customized && r.Kind == OptionKind.Choice) glow++;
+                        if (!part && !wrap) continue;
+                        if (part) parts++; else wraps++;
+                        if (r.Node.Value == uint.MaxValue) { unset++; continue; }
+                        if (r.Kind != OptionKind.Choice || r.Choices.First(x => x.Value == r.Node.Value).Text.StartsWith("Number ")) off++;
+                    }
+                }
+            }
+            Console.WriteLine("  named options: " + cars + " customized cars, " + parts + " parts and " + wraps + " wraps, " + off + " outside the game's lists, " + unset + " unset, "
+                + sounds + " sounds of which " + soundsNamed + " named, " + glow + " underglow lists, " + unnamed + " slots with no table, "
+                + wheels + " rim and tire values: " + wheelsOff + " outside the lists, " + wheelsUnset + " unset");
+            Check(wheelsOff == 0, "every chosen rim and tire is a real option");
+            Check(off == 0, "every chosen part and wrap is a real option");
+            Check(soundsNamed == sounds, "every sound in real saves has a name");
+            Check(unnamed == 0, "every garage vehicle has a table");
+            VehicleOptions olive = VehicleTables.Find("sedan_01b");
+            Check(olive != null && olive.Display == "Saints Olive" && olive.Parts.Count == 8 && olive.Parts[2].Label == "Hood", "Saints Olive's parts are named");
+            Check(olive != null && olive.Axles.Count == 2 && olive.Axles[0].MinSize == "0.95" && VehicleTables.Rim(olive.Axles[0].Rim) != null && VehicleTables.Tire(olive.Axles[0].Tire) != null, "Saints Olive's wheels load, with limits and lists");
+            Check(Names.Display("veh_horn_bike_01") == "Motocross", "the game's English names load");
+        }
+
         // The button's scope is a decision: these lists have to stay opt-in.
         static void UnlockAllScope()
         {
@@ -589,6 +643,7 @@ namespace Sr5Save
             foreach (string p in all) { RoundTrip(p); CountBound(p); }
             Console.WriteLine("round trip and count bound: " + (failures == 0 ? "ok" : failures + " failures"));
             UnlockAllScope();
+            GarageOptionsAreReal(games);
             InventoryComplete(games);
             CustomItemsStayOut(games);
             RealRewardCar(games);

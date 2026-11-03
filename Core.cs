@@ -70,11 +70,12 @@ namespace Sr5Save
                 if (table == null)
                 {
                     table = new Dictionary<uint, string>();
-                    foreach (string line in Resources.Lines("names.txt"))
-                    {
-                        int tab = line.IndexOf('\t');
-                        if (tab == 8) table[uint.Parse(line.Substring(0, 8), NumberStyles.HexNumber)] = line.Substring(9);
-                    }
+                    foreach (string file in new[] { "table_names.txt", "names.txt" })
+                        foreach (string line in Resources.Lines(file))
+                        {
+                            int tab = line.IndexOf('\t');
+                            if (tab == 8) table[uint.Parse(line.Substring(0, 8), NumberStyles.HexNumber)] = line.Substring(9);
+                        }
                 }
                 return table;
             }
@@ -89,6 +90,27 @@ namespace Sr5Save
         public static string Get(uint hash)
         {
             return Find(hash) ?? hash.ToString("x8");
+        }
+
+        static Dictionary<uint, string> display;
+
+        // The game's own English name for a record, if it has one.
+        public static string Display(string id)
+        {
+            if (display == null)
+            {
+                display = new Dictionary<uint, string>();
+                foreach (string line in Resources.Lines("display_names.txt"))
+                    if (line.Length > 9 && line[8] == '\t') display[uint.Parse(line.Substring(0, 8), NumberStyles.HexNumber)] = line.Substring(9);
+            }
+            string s;
+            return !string.IsNullOrEmpty(id) && display.TryGetValue(Crc.Of(id), out s) ? s : null;
+        }
+
+        // What to call an item on screen: the game's name, or a tidied id.
+        public static string Label(string id)
+        {
+            return Display(id) ?? Pretty(id);
         }
 
         // weapon_melee_2hand_axe -> Melee 2hand Axe

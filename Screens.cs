@@ -646,7 +646,9 @@ namespace Sr5Save
         {
             if (string.IsNullOrEmpty(id)) return kind;
             VariantInfo v = VariantTable.Find(id);
-            return v != null ? v.Label : id;
+            if (v != null) return v.Label;
+            string shown = Names.Display(id);
+            return shown != null ? shown + "  (" + id + ")" : id;
         }
 
         void Filter()

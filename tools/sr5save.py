@@ -14,7 +14,8 @@ import sys
 MAGIC_DATA = 0xE4C7BBD7
 MAGIC_SCHEMA = 0xAE1F7795
 OP_RECORD, OP_STRUCT, OP_STRUCT_END, OP_ARRAY, OP_ARRAY_END, OP_BLOB, OP_LONG = 0x01, 0x10, 0x11, 0x12, 0x13, 0x15, 0x0A
-SCALAR_OPS = {0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x0B}
+OP_STRING2 = 0x0F  # a string held in an array, seen in the game's tables
+SCALAR_OPS = {0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x0B, 0x19}  # 0x19, a resource reference: only in the game's tables
 OP_STRING = 0x0E
 
 
@@ -60,9 +61,14 @@ def parse_schema(b, o):
         o += 20
         fields = []
         for _ in range(nf):
+            stored = b[o]   # 0 in the game's tables for a field that has no offset; saves always have 1
             o += 1
-            fh, _z, ty, bits, ref, off, _b2 = struct.unpack_from('<7I', b, o)
-            o += 28
+            fh, _z, ty, bits, ref = struct.unpack_from('<5I', b, o)
+            o += 20
+            off = 0
+            if stored:
+                off = u32(b, o)
+                o += 8
             fields.append(dict(hash=fh, type=ty, bits=bits, ref=ref, off=off))
         o += 3
         out.append(dict(hash=h, size=size, align=al, fields=fields))
@@ -110,10 +116,10 @@ def parse_records(b, start, end, schema):
                 else:
                     assert ended['kind'] == 'struct', 'struct end for an array at %#x' % p
                 p += 8
-            elif op in (OP_BLOB, OP_STRING):
-                cur['children'].append(dict(kind='blob', pos=p, f=f, len=v))
+            elif op in (OP_BLOB, OP_STRING, OP_STRING2):
+                cur['children'].append(dict(kind='blob', pos=p, f=f, len=v, data=b[p + 8:p + 8 + v]))
                 p = align8(p + 8 + v)
-            elif op == OP_LONG:
+            elif op in (OP_LONG, 0x0C):  # 0x0C, a double: only in the game's tables
                 cur['children'].append(dict(kind='val', pos=p, f=f, op=op, v=struct.unpack_from('<Q', b, p + 8)[0]))
                 p += 16
             elif op in SCALAR_OPS:

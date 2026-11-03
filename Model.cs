@@ -231,6 +231,8 @@ namespace Sr5Save
                     if (p.Length == 2) table[p[0]] = p[1];
                 }
             }
+            VehicleOptions named = VehicleTables.Find(info);
+            if (named != null && named.Display.Length > 0) return named.Display;
             string s;
             return info != null && table.TryGetValue(info, out s) ? s : Names.Pretty(info ?? "");
         }
@@ -388,6 +390,19 @@ namespace Sr5Save
         public WeaponInfo Info;
         public Node Record;     // null while the save has no record for it
         public Node Template;
+
+        // Some weapons come in versions that share a name, so the version is shown beside it.
+        public string Label
+        {
+            get
+            {
+                string label = Names.Label(Info.Name), id = Info.Name.ToLowerInvariant();
+                if (id.Contains("boothill")) return label + " (Boot Hill)";
+                if (id.Contains("maingame")) return label + " (main game)";
+                if (id.Contains("custom")) return label + " (custom)";
+                return label;
+            }
+        }
     }
 
     public sealed class UnlockEntry

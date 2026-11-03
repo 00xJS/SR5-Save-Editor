@@ -1,0 +1,77 @@
+# Names of records in the game's tables that saves refer to by hash. Rebuild with tools/gen_tables.py.
+88c8a753	burned out
+a01be4ba	interior color 1
+3912b500	interior color 2
+ccdcb317	interior detail normal 1
+55d5e2ad	interior detail normal 2
+4370bbca	interior diffuse map
+5bf79b64	interior gloss map
+efe6bbcc	interior normal map
+6396f145	interior occlusion map
+856fdc57	interior reflectivity map
+86749258	iridescent color 1
+1f7dc3e2	iridescent color 2
+869c3b0b	iridescent flip gradient
+b7391764	iridescent gradient
+df11e97f	iridescent gradient 2
+57f0bfe0	iridescent pattern
+468e7d7a	iridescent pattern scale
+82296ec8	original color
+3223247d	paint age
+56d93e5a	paint color 1
+9560ee77	paint decal alpha tightness
+7a9fc00c	paint decal alpha tightness 2
+dcf00c90	paint decal black light intensity
+db633119	paint decal glossiness
+978d0763	paint decal glossiness 2
+2e434bd9	paint decal map
+eca7bd2f	paint decal map 2
+c0ed3d57	paint decal map clamp
+f0c1324d	paint decal map clamp 2
+16f45794	paint decal metalness
+bd71e89f	paint decal metalness 2
+412dc22e	paint dirt
+4fa542ca	paint glossiness
+aa84fa1d	paint grime
+b4bc001d	paint metalness
+88eded4f	paint normal atlas
+17be7645	paint normal atlas occlusion
+fcaeb513	paint scratch mask
+b4432ec2	plate seed
+39c7670c	tire dirt
+edea648d	underpaint glossiness
+b463b230	window opacity
+9fbe86a4	window tint
+d65f10ec	shared_vehicle_params
+f50dd899	rim_b_exotic_03
+96f9fa3a	rim_b_moped_01
+7fe9dbdd	rim_b_moto
+01cba798	rim_b_rocket_02
+55cb3916	rim_b_street_01
+573d7e1c	rim_b_street_01b
+ccc268ac	rim_b_street_02
+45d4ab1b	rim_f_exotic_03
+9f125a40	rim_f_moped_01
+e47899cb	rim_f_moto
+b112d41a	rim_f_rocket_02
+e5124a94	rim_f_street_01
+543b4563	rim_f_street_01b
+7c1b1b2e	rim_f_street_02
+7338243e	rim_slot
+a6491743	vanguard_rim_slot
+fbe2440f	dirt_02_tire_b
+fc8f8016	dirt_02_tire_f
+fbd167d8	exotic_03_tire_b
+fcbca3c1	exotic_03_tire_f
+61812364	moped_01_tire_b
+66ece77d	moped_01_tire_f
+c8834ff3	rocket_02_tire_b
+cfee8bea	rocket_02_tire_f
+73a9319a	street_01_tire_b
+74c4f583	street_01_tire_f
+46c508dd	street_01b_tire_b
+41a8ccc4	street_01b_tire_f
+fd263679	street_02_tire_b
+fa4bf260	street_02_tire_f
+762cd1c3	tire_slot
+584dad71	vanguard_tire_slot
